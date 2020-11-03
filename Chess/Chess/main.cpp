@@ -1,18 +1,38 @@
 #include <SFML/Graphics.hpp>
+#include <iostream>
+
+using namespace std;
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
-    sf::CircleShape shape(100.f);
-    shape.setFillColor(sf::Color::Green);
+
+    sf::RenderWindow window(sf::VideoMode(900, 900), "SFML works!");
+
+    //create shape
+    sf::Sprite shape;
+
+    //Create texure
+    sf::Texture texture;
+    texture.loadFromFile("board.png");
+
+    //Attach texture to the shape
+    shape.setTexture(texture);
+
+
 
     while (window.isOpen())
     {
+        //poll for events
         sf::Event event;
         while (window.pollEvent(event))
         {
             if (event.type == sf::Event::Closed)
                 window.close();
+
+            else if (event.type == sf::Event::MouseButtonReleased) {
+                cout << sf::Mouse::getPosition(window).x << " " 
+                    << sf::Mouse::getPosition(window).y << endl;
+            }
         }
 
         window.clear();
