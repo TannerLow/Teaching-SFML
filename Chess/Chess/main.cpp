@@ -1,10 +1,15 @@
 #include <SFML/Graphics.hpp>
+#include <iostream>
+#include "Board.h"
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
-    sf::CircleShape shape(100.f);
-    shape.setFillColor(sf::Color::Green);
+    using namespace std;
+    sf::RenderWindow window(sf::VideoMode(900, 900), "SFML works!");
+    sf::Sprite shape;
+    sf::Texture texture;
+    texture.loadFromFile("board.png");
+    shape.setTexture(texture);
 
     while (window.isOpen())
     {
@@ -13,6 +18,9 @@ int main()
         {
             if (event.type == sf::Event::Closed)
                 window.close();
+            else if (event.type == sf::Event::MouseButtonReleased); {
+                cout << sf::Mouse::getPosition().x << " " << sf::Mouse::getPosition().y << endl;
+            }
         }
 
         window.clear();
