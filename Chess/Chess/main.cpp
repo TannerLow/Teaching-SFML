@@ -1,5 +1,6 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include "Renderer.h"
 
 using namespace std;
 
@@ -7,6 +8,8 @@ int main()
 {
 
     sf::RenderWindow window(sf::VideoMode(900, 900), "SFML works!");
+
+    Renderer r;
 
     //create shape
     sf::Sprite shape;
