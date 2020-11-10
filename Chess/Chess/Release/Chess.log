@@ -1,8 +1,5 @@
-﻿  main.cpp
-C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\main.cpp(20,67): warning C4390: ';': empty controlled statement found; is this the intent?
-  Generating code
-  11 of 102 functions (10.8%) were compiled, the rest were copied from previous compilation.
-    9 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
-  Finished generating code
-  Chess.vcxproj -> C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Release\Chess.exe
+﻿  Board.cpp
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.cpp(4,16): error C2084: function 'Board::Board(void)' already has a body
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(11): message : see previous definition of '{ctor}'
+  main.cpp
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\main.cpp(21,67): warning C4390: ';': empty controlled statement found; is this the intent?
