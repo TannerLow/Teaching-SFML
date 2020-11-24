@@ -1,5 +1,7 @@
-﻿  Board.cpp
-C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.cpp(4,16): error C2084: function 'Board::Board(void)' already has a body
-C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(11): message : see previous definition of '{ctor}'
-  main.cpp
-C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\main.cpp(21,67): warning C4390: ';': empty controlled statement found; is this the intent?
+﻿  main.cpp
+  Generating code
+  5 of 93 functions ( 5.4%) were compiled, the rest were copied from previous compilation.
+    4 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  Chess.vcxproj -> C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Release\Chess.exe

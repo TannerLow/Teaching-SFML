@@ -13,6 +13,7 @@ int main()
 
     while (window.isOpen())
     {
+        //poll for events (While loop constantly runs)
         sf::Event event;
         while (window.pollEvent(event))
         {
