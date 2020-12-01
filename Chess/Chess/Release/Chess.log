@@ -1,7 +1,66 @@
-﻿  main.cpp
-  Generating code
-  5 of 93 functions ( 5.4%) were compiled, the rest were copied from previous compilation.
-    4 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
-  Finished generating code
-  Chess.vcxproj -> C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Release\Chess.exe
+﻿  Board.cpp
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(20,43): error C2061: syntax error: identifier 'Board'
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(45,1): error C2059: syntax error: 'if'
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(45,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.cpp(4,16): error C2084: function 'Board::Board(void)' already has a body
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(11): message : see previous definition of '{ctor}'
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.cpp(8,1): error C2011: 'Board': 'class' type redefinition
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(6): message : see declaration of 'Board'
+  main.cpp
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(20,43): error C2061: syntax error: identifier 'Board'
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(45,1): error C2059: syntax error: 'if'
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(45,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\main.cpp(22,67): warning C4390: ';': empty controlled statement found; is this the intent?
+  Piece.cpp
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(9,7): error C2143: syntax error: missing ';' before '*'
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(9,7): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(9,20): error C2238: unexpected token(s) preceding ';'
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(15,5): error C2065: 'board': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(19,4): error C2065: 'board': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(19,1): error C2061: syntax error: identifier 'Piece'
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(20,4): error C2065: 'board': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(20,1): error C2061: syntax error: identifier 'Piece'
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(22,3): error C2065: 'board': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(22,1): error C2061: syntax error: identifier 'Piece'
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(23,3): error C2065: 'board': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(23,1): error C2061: syntax error: identifier 'Piece'
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(24,3): error C2065: 'board': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(24,1): error C2061: syntax error: identifier 'Piece'
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(25,3): error C2065: 'board': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(25,1): error C2061: syntax error: identifier 'Piece'
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(26,3): error C2065: 'board': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(26,1): error C2061: syntax error: identifier 'Piece'
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(27,3): error C2065: 'board': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(27,1): error C2061: syntax error: identifier 'Piece'
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(28,3): error C2065: 'board': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(28,1): error C2061: syntax error: identifier 'Piece'
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(29,3): error C2065: 'board': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(29,1): error C2061: syntax error: identifier 'Piece'
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(31,3): error C2065: 'board': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(31,1): error C2061: syntax error: identifier 'Piece'
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(32,3): error C2065: 'board': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(32,1): error C2061: syntax error: identifier 'Piece'
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(33,3): error C2065: 'board': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(33,1): error C2061: syntax error: identifier 'Piece'
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(34,3): error C2065: 'board': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(34,1): error C2061: syntax error: identifier 'Piece'
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(35,3): error C2065: 'board': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(35,1): error C2061: syntax error: identifier 'Piece'
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(36,3): error C2065: 'board': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(36,1): error C2061: syntax error: identifier 'Piece'
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(37,3): error C2065: 'board': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(37,1): error C2061: syntax error: identifier 'Piece'
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(38,3): error C2065: 'board': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(38,1): error C2061: syntax error: identifier 'Piece'
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(42,3): error C2065: 'board': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(45,7): error C2065: 'board': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(46,8): error C2065: 'board': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(47,5): error C2065: 'board': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(47,44): error C2065: 'board': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(48,5): error C2065: 'board': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(51,5): error C2065: 'board': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(51,44): error C2065: 'board': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(52,5): error C2065: 'board': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(53,5): error C2065: 'board': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(45,1): error C2059: syntax error: 'if'
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(45,1): error C2143: syntax error: missing ';' before '{'

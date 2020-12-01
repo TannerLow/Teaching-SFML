@@ -17,6 +17,9 @@ public:
 		int y = row;
 		color = ColorX;
 	}
+	string getColor () {
+		return color;
+	}
 	bool isValidMove(int col, int row, Board X) {
 		if (type == "pawn") {
 			if (color == "black") {

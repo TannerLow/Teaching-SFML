@@ -39,19 +39,25 @@ public:
 
 	}
 	void remove(int r, int c) {
+		delete board[r][c];
 		board[r][c] = nullptr;
 	}
 	void move(int original_row, int original_column, int new_row, int new_column) {
-		if (board[original_row][original_column]->isValidMove(new_column, new_row)) {
+		if (board[original_row][original_column]->isValidMove(new_column, new_row, this)) {
 			if (board[new_row][new_column] != nullptr) {
+				remove(new_row, new_column);
 				board[original_row][original_column] = board[new_row][new_column];
-				board[original_row][original_column] = nullptr;
+				remove(original_row, original_column);
 			}
 			else {
 				board[original_row][original_column] = board[new_row][new_column];
-				board[original_row][original_column] = nullptr;
-				board[new_row][new_column] = nullptr;
+				remove(original_row, original_column);
 			}
+		}
+	}
+	bool whatever_you_like(int row, int column, string color) {
+		if (board[row][column] != nullptr and color != board[row][column]->getColor()) {
+			return true;
 		}
 	}
 };
