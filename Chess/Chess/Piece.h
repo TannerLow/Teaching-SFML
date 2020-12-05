@@ -44,13 +44,22 @@ public:
 			}
 		}
 		if (type == "king") {
-			if //color
+			if (color == "black") { //color
 				if (y - 1 <= row and row <= y + 1) {
 					if (x - 1 <= col and col <= x + 1) {
 						if (col != x and row != y) // can't land on same piece 
-						return true;
+							return true;
 					}
 				}
+			}  
+			if (color == "white") { //color
+				if (y - 1 <= row and row <= y + 1) {
+					if (x - 1 <= col and col <= x + 1) {
+						if (col != x and row != y) // can't land on same piece
+							return true;
+					}
+			  }
+			}
 		}
 
 	}
