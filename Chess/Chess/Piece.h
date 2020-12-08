@@ -20,7 +20,7 @@ public:
 	string getColor () {
 		return color;
 	}
-	bool isValidMove(int col, int row, Board X) {
+	bool isValidMove(int col, int row, Board &boardy) {
 		if (type == "pawn") {
 			if (color == "black") {
 				if (col == x - 1 and row == y - 1) { // and enemy piece 
@@ -59,6 +59,55 @@ public:
 							return true;
 					}
 			  }
+			}
+		}
+		if (type == "Rook") {
+			//If the row and column are both changed, the function will see it as an invalid move
+			if (x != col and y == row or x == col and y != row) { 
+				if (x < col and y == row) { // to the right
+					for (int i = 1; col - i > x; i++) {
+						if (boardy.isEnemy(row, col - i, color)) {
+							return false;
+						}
+						else if (boardy.isAlly(row, col - i, color)) {
+							return false;
+						}
+					}
+				}
+				else if (x > col and y == row) { // to the left
+					for (int i = 1; col + i < x; i++) {
+						if (boardy.isEnemy(row, col + i, color)) {
+							return false;
+						}
+						else if (boardy.isAlly(row, col + i, color)) {
+							return false;
+						}
+					}
+				}
+				else if (x == col and y > row) { // going down
+					for (int i = 1; row - i > y; i++) {
+						if (boardy.isEnemy(row - i, col, color)) {
+							return false;
+						}
+						else if (boardy.isAlly(row - i, col, color)) {
+							return false;
+						}
+					}
+				}
+				else if (x == col and y < row) { // going up
+					for (int i = 1; row + i < y; i++) {
+						if (boardy.isEnemy(row + i, col, color)) {
+							return false;
+						}
+						else if (boardy.isAlly(row + i, col, color)) {
+							return false;
+						}
+					}
+				}
+				if (boardy.isAlly(row, col, color)) {
+					return false;
+				}
+				return true;
 			}
 		}
 
