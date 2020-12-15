@@ -67,6 +67,25 @@ public:
 					}
 			    }
 		}
+		if (type == "Knight") {
+			if (col == x + 1 and row == y + 2 and !boardy.isAlly(row, col, color))
+				return true;
+			if (col == x + 1 and row == y - 2 and !boardy.isAlly(row, col, color))
+				return true;
+			if (col == x + 2 and row == y + 1 and !boardy.isAlly(row, col, color))
+				return true;
+			if (col == x + 2 and row == y - 1 and !boardy.isAlly(row, col, color)) 
+				return true;
+			if (col == x - 1 and row == y - 1 and !boardy.isAlly(row, col, color))
+				return true;
+			if (col == x - 1 and row == y + 2 and !boardy.isAlly(row, col, color))
+				return true;
+			if (col == x - 2 and row == y - 1 and !boardy.isAlly(row, col, color))
+				return true;
+			if (col == x - 2 and row == y + 1 and !boardy.isAlly(row, col, color))
+				return true;
+			return false;
+		}
 		if (type == "Rook") {
 			//If the row and column are both changed, the function will see it as an invalid move
 			if (x != col and y == row or x == col and y != row) { 
