@@ -135,7 +135,150 @@ public:
 				return true;
 			}
 		}
-
+		if (type == "Bishop") {
+			//If the row and column are both changed, the function will see it as an invalid move
+			if (x != col and y != row) {
+				if (x < col and y < row) { // going top right
+					for (int i = 1; col - i > x and row - i > y; i++) {
+						if (boardy.isEnemy(row - i, col - i, color)) {
+							return false;
+						}
+						else if (boardy.isAlly(row - i, col - i, color)) {
+							return false;
+						}
+					}
+				}
+				else if (x > col and y > row) { // going bottom left
+					for (int i = 1; col + i < x and row + i < y; i++) {
+						if (boardy.isEnemy(row + i, col + i, color)) {
+							return false;
+						}
+						else if (boardy.isAlly(row + i, col + i, color)) {
+							return false;
+						}
+					}
+				}
+				else if (x < col and y > row) { // going bottom right
+					for (int i = 1; row - i > y and col + i < x; i++) {
+						if (boardy.isEnemy(row - i, col + i, color)) {
+							return false;
+						}
+						else if (boardy.isAlly(row - i, col + i, color)) {
+							return false;
+						}
+					}
+				}
+				else if (x > col and y < row) { // going top left
+					for (int i = 1; row + i < y and col - i > x; i++) {
+						if (boardy.isEnemy(row + i, col - i, color)) {
+							return false;
+						}
+						else if (boardy.isAlly(row + i, col - i, color)) {
+							return false;
+						}
+					}
+				}
+				if (boardy.isAlly(row, col, color)) {
+					return false;
+				}
+				return true;
+			}
+		}
+		if (type == "Queen") {
+			if (x != col and y == row or x == col and y != row) { // rook check
+				if (x < col and y == row) { // to the right
+					for (int i = 1; col - i > x; i++) {
+						if (boardy.isEnemy(row, col - i, color)) {
+							return false;
+						}
+						else if (boardy.isAlly(row, col - i, color)) {
+							return false;
+						}
+					}
+				}
+				else if (x > col and y == row) { // to the left
+					for (int i = 1; col + i < x; i++) {
+						if (boardy.isEnemy(row, col + i, color)) {
+							return false;
+						}
+						else if (boardy.isAlly(row, col + i, color)) {
+							return false;
+						}
+					}
+				}
+				else if (x == col and y > row) { // going down
+					for (int i = 1; row - i > y; i++) {
+						if (boardy.isEnemy(row - i, col, color)) {
+							return false;
+						}
+						else if (boardy.isAlly(row - i, col, color)) {
+							return false;
+						}
+					}
+				}
+				else if (x == col and y < row) { // going up
+					for (int i = 1; row + i < y; i++) {
+						if (boardy.isEnemy(row + i, col, color)) {
+							return false;
+						}
+						else if (boardy.isAlly(row + i, col, color)) {
+							return false;
+						}
+					}
+				}
+				if (boardy.isAlly(row, col, color)) {
+					return false;
+				}
+				return true;
+			}
+			else if (x != col and y != row) { // bishop check
+				if (x < col and y < row) { // going top right
+					for (int i = 1; col - i > x and row - i > y; i++) {
+						if (boardy.isEnemy(row - i, col - i, color)) {
+							return false;
+						}
+						else if (boardy.isAlly(row - i, col - i, color)) {
+							return false;
+						}
+					}
+				}
+				else if (x > col and y > row) { // going bottom left
+					for (int i = 1; col + i < x and row + i < y; i++) {
+						if (boardy.isEnemy(row + i, col + i, color)) {
+							return false;
+						}
+						else if (boardy.isAlly(row + i, col + i, color)) {
+							return false;
+						}
+					}
+				}
+				else if (x < col and y > row) { // going bottom right
+					for (int i = 1; row - i > y and col + i < x; i++) {
+						if (boardy.isEnemy(row - i, col + i, color)) {
+							return false;
+						}
+						else if (boardy.isAlly(row - i, col + i, color)) {
+							return false;
+						}
+					}
+				}
+				else if (x > col and y < row) { // going top left
+					for (int i = 1; row + i < y and col - i > x; i++) {
+						if (boardy.isEnemy(row + i, col - i, color)) {
+							return false;
+						}
+						else if (boardy.isAlly(row + i, col - i, color)) {
+							return false;
+						}
+					}
+				}
+				if (boardy.isAlly(row, col, color)) {
+					return false;
+				}
+				return true;
+			}
+		}
+ 
 	}
 };
 

@@ -1,15 +1,41 @@
-﻿  Board.cpp
+﻿  main.cpp
 C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(23,43): error C2061: syntax error: identifier 'Board'
 C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(69,11): error C2065: 'boardy': undeclared identifier
-C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(46,1): error C2660: 'Piece::isValidMove': function does not take 3 arguments
-C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(23,7): message : see declaration of 'Piece::isValidMove'
-C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.cpp(4,16): error C2084: function 'Board::Board(void)' already has a body
-C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(11): message : see previous definition of '{ctor}'
-C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.cpp(8,1): error C2011: 'Board': 'class' type redefinition
-C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(6): message : see declaration of 'Board'
-  main.cpp
-C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(23,43): error C2061: syntax error: identifier 'Board'
-C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(69,11): error C2065: 'boardy': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(72,16): error C2065: 'boardy': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(79,11): error C2065: 'boardy': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(82,16): error C2065: 'boardy': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(89,11): error C2065: 'boardy': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(92,16): error C2065: 'boardy': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(99,11): error C2065: 'boardy': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(102,16): error C2065: 'boardy': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(107,9): error C2065: 'boardy': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(118,11): error C2065: 'boardy': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(121,16): error C2065: 'boardy': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(128,11): error C2065: 'boardy': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(131,16): error C2065: 'boardy': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(138,11): error C2065: 'boardy': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(141,16): error C2065: 'boardy': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(148,11): error C2065: 'boardy': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(151,16): error C2065: 'boardy': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(156,9): error C2065: 'boardy': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(166,11): error C2065: 'boardy': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(169,16): error C2065: 'boardy': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(176,11): error C2065: 'boardy': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(179,16): error C2065: 'boardy': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(186,11): error C2065: 'boardy': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(189,16): error C2065: 'boardy': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(196,11): error C2065: 'boardy': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(199,16): error C2065: 'boardy': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(204,9): error C2065: 'boardy': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(212,11): error C2065: 'boardy': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(215,16): error C2065: 'boardy': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(222,11): error C2065: 'boardy': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(225,16): error C2065: 'boardy': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(232,11): error C2065: 'boardy': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(235,16): error C2065: 'boardy': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(242,11): error C2065: 'boardy': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(245,16): error C2065: 'boardy': undeclared identifier
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(250,9): error C2065: 'boardy': undeclared identifier
 C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Board.h(46,1): error C2660: 'Piece::isValidMove': function does not take 3 arguments
 C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(23,7): message : see declaration of 'Piece::isValidMove'
 C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\main.cpp(22,67): warning C4390: ';': empty controlled statement found; is this the intent?
