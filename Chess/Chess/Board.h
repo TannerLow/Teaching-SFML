@@ -55,16 +55,4 @@ public:
 			}
 		}
 	}
-	bool isEnemy(int row, int column, string color) {
-		if (board[row][column] != nullptr and color != board[row][column]->getColor()) {
-			return true;
-		}
-		return false;
-	}
-	bool isAlly(int row, int column, string color) {
-		if (board[row][column] != nullptr and color == board[row][column]->getColor()) {
-			return true;
-		}
-		return false;
-	}
 };
