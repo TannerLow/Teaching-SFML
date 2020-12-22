@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 #include <iostream>
-#include "Board.h" b
+
 using namespace std;
 
 class Piece {
@@ -45,9 +45,8 @@ public:
 					return true;
 				}
 				if (col == x and row == 4 and y == 6 and !isEnemy(board, row, col) and !isAlly(board, row, col) and !isEnemy(board, row + 1, col) and !isAlly(board, row + 1, col)) {
-				 // Check if there any pieces in front of it, 1 or 2 spots
+					// Check if there any pieces in front of it, 1 or 2 spots
 					return true;
-
 
 				}
 			}
@@ -66,16 +65,17 @@ public:
 					return true;
 				}
 			}
-			if (type == "king") {
-				if (y - 1 <= row and row <= y + 1) {
-					if (x - 1 <= col and col <= x + 1) {
-						if (col != x and row != y) // can't land on same piece
-							return true;
-						if (isAlly(board, row, col) == true) {
-							return false;
-						}
+		}
+		if (type == "king") {
+			if (y - 1 <= row and row <= y + 1) {
+				if (x - 1 <= col and col <= x + 1) {
+					if (col != x and row != y) // can't land on same piece
+						return true;
+					if (isAlly(board, row, col) == true) {
+						return false;
 					}
-			    }
+				}
+			}
 		}
 		if (type == "Knight") {
 			if (col == x + 1 and row == y + 2 and !isAlly(board, row, col))
@@ -138,7 +138,7 @@ public:
 							return false;
 						}
 					}
-					if (boardy.isAlly(row, col, color)) {
+					if (isAlly(board, row, col)) {
 						return false;
 					}
 					return true;
@@ -191,7 +191,7 @@ public:
 							return false;
 						}
 					}
-					if (boardy.isAlly(row, col, color)) {
+					if (isAlly(board, row, col)) {
 						return false;
 					}
 					return true;
@@ -290,7 +290,7 @@ public:
 							return false;
 						}
 					}
-					if (boardy.isAlly(row, col, color)) {
+					if (isAlly(board,row, col)) {
 						return false;
 					}
 					return true;
@@ -300,7 +300,6 @@ public:
 				}
 				return true;
 			}
-
 		}
 	}
 };

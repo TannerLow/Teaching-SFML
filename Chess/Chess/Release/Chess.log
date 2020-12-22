@@ -1,61 +1,7 @@
 ﻿  main.cpp
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Piece.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Piece.h(23,43): error C2061: syntax error: identifier 'Board'
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\main.cpp(4,7): error C2059: syntax error: 'using namespace'
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\main.cpp(4,20): error C2238: unexpected token(s) preceding ';'
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Piece.h(7): fatal error C1075: '{': no matching token found
   Piece.cpp
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Piece.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(9,7): error C2143: syntax error: missing ';' before '*'
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(9,7): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(9,20): error C2238: unexpected token(s) preceding ';'
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(15,5): error C2065: 'board': undeclared identifier
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(19,4): error C2065: 'board': undeclared identifier
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(19,1): error C2061: syntax error: identifier 'Piece'
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(20,4): error C2065: 'board': undeclared identifier
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(20,1): error C2061: syntax error: identifier 'Piece'
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(22,3): error C2065: 'board': undeclared identifier
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(22,1): error C2061: syntax error: identifier 'Piece'
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(23,3): error C2065: 'board': undeclared identifier
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(23,1): error C2061: syntax error: identifier 'Piece'
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(24,3): error C2065: 'board': undeclared identifier
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(24,1): error C2061: syntax error: identifier 'Piece'
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(25,3): error C2065: 'board': undeclared identifier
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(25,1): error C2061: syntax error: identifier 'Piece'
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(26,3): error C2065: 'board': undeclared identifier
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(26,1): error C2061: syntax error: identifier 'Piece'
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(27,3): error C2065: 'board': undeclared identifier
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(27,1): error C2061: syntax error: identifier 'Piece'
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(28,3): error C2065: 'board': undeclared identifier
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(28,1): error C2061: syntax error: identifier 'Piece'
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(29,3): error C2065: 'board': undeclared identifier
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(29,1): error C2061: syntax error: identifier 'Piece'
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(31,3): error C2065: 'board': undeclared identifier
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(31,1): error C2061: syntax error: identifier 'Piece'
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(32,3): error C2065: 'board': undeclared identifier
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(32,1): error C2061: syntax error: identifier 'Piece'
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(33,3): error C2065: 'board': undeclared identifier
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(33,1): error C2061: syntax error: identifier 'Piece'
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(34,3): error C2065: 'board': undeclared identifier
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(34,1): error C2061: syntax error: identifier 'Piece'
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(35,3): error C2065: 'board': undeclared identifier
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(35,1): error C2061: syntax error: identifier 'Piece'
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(36,3): error C2065: 'board': undeclared identifier
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(36,1): error C2061: syntax error: identifier 'Piece'
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(37,3): error C2065: 'board': undeclared identifier
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(37,1): error C2061: syntax error: identifier 'Piece'
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(38,3): error C2065: 'board': undeclared identifier
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(38,1): error C2061: syntax error: identifier 'Piece'
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(42,10): error C2065: 'board': undeclared identifier
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(43,3): error C2065: 'board': undeclared identifier
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(46,7): error C2065: 'board': undeclared identifier
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(47,8): error C2065: 'board': undeclared identifier
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(49,5): error C2065: 'board': undeclared identifier
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(49,44): error C2065: 'board': undeclared identifier
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(53,5): error C2065: 'board': undeclared identifier
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(53,44): error C2065: 'board': undeclared identifier
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(59,7): error C2065: 'board': undeclared identifier
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(59,50): error C2065: 'board': undeclared identifier
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(65,7): error C2065: 'board': undeclared identifier
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(65,50): error C2065: 'board': undeclared identifier
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Piece.h(7): fatal error C1075: '{': no matching token found
+  Generating code
+  Previous IPDB and IOBJ mismatch, fall back to full compilation.
+  All 11 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Chess.vcxproj -> C:\Users\Tanner\Documents\GitHub\Teaching-SFML\Chess\Release\Chess.exe
