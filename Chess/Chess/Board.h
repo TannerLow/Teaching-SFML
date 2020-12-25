@@ -10,7 +10,7 @@ private:
 public:
 	Board() {
 		board = new Piece * *[8];
-		for (int i; i < 8; i++)
+		for (int i = 0; i < 8; i++)
 			board[i] = new Piece *[8];
 
 		//use a loop to set every spot in the board to a null pointer
@@ -46,7 +46,7 @@ public:
 		delete board[r][c];
 		board[r][c] = nullptr;
 	}
-	void move(int original_row, int original_column, int new_row, int new_column) {
+	bool move(int original_row, int original_column, int new_row, int new_column) {
 		if (board[original_row][original_column]->isValidMove(new_column, new_row, board)) {
 			if (board[new_row][new_column] != nullptr) {
 				remove(new_row, new_column);
@@ -57,15 +57,17 @@ public:
 				board[original_row][original_column] = board[new_row][new_column];
 				remove(original_row, original_column);
 			}
+			return true;
 		}
+		return false;
 	}
 	~Board() {
-		for (int i; i < 8; i++) {
-			for (int b; i < 8; i++) {
+		for (int i = 0; i < 8; i++) {
+			for (int b = 0; i < 8; i++) {
 				remove(i, b);
 			}
 		}
-		for (int i; i < 8; i++)
+		for (int i = 0; i < 8; i++)
 			delete[] board[i];
 		delete[] board;
 	}
