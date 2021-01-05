@@ -1,14 +1,32 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include "Board.h"
+#include "Renderer.h"
 using namespace std;
 
 int main() {
+	Renderer r;
+	sf::RenderWindow window(sf::VideoMode(800,800), "Chess");
+
+	while (window.isOpen())
+	{
+		sf::Event event;
+		while (window.pollEvent(event))
+		{
+			if (event.type == sf::Event::Closed)
+				window.close();
+		}
+
+		window.clear();
+		r.draw(window);
+		window.display();
+	}
+
 	int a;
 	int b;
 	int c;
 	int d;
-	string e;
+
 	Board board;
 
 	cout << "Row 1: ";
@@ -22,8 +40,7 @@ int main() {
 	cout << endl;
 	cout << "Column 2: ";
 	cin >> d;
-	cout << "Color: ";
-	cin >> e;
+
 	cout << (board.move(a, b, c, d) ? "move successful" : "move marked invalid")  << endl;
 	cout << endl;
 }

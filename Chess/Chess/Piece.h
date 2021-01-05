@@ -70,6 +70,7 @@ public:
 					// Check if there any pieces in front of it, 1 or 2 spots
 					return true;
 				}
+				return false;
 			}
 		}
 		if (type == "king") {
