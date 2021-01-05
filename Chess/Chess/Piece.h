@@ -33,22 +33,28 @@ public:
 		return false;
 	}
 	bool isValidMove(int col, int row, Piece***board) {
+		cout << type << color << x << y << endl;
 		if (type == "pawn") {
 			if (color == "black") {
-				if (col == x - 1 and row == y - 1 and isEnemy(board, row, col)) { // and enemy piece 
+				if (col == x - 1 and row == y - 1 and isEnemy(board, row, col)) { // diagonal attack
+					cout << "Working" << endl;;
 					return true;
 				}
-				if (col == x + 1 and row == y - 1 and isEnemy(board, row, col)) { // and enemy piece 
+				if (col == x + 1 and row == y - 1 and isEnemy(board, row, col)) { // diagonal attack 
+					cout << "Work" << endl;
 					return true;
 				}
-				if (col == x and row == y - 1 and !isEnemy(board, row, col) and !isAlly(board, row, col)) { // and no enemy piece
+				if (col == x and row == y - 1 and !isEnemy(board, row, col) and !isAlly(board, row, col)) { // move forward
+					cout << "Worked" << endl;
 					return true;
 				}
 				if (col == x and row == 4 and y == 6 and !isEnemy(board, row, col) and !isAlly(board, row, col) and !isEnemy(board, row + 1, col) and !isAlly(board, row + 1, col)) {
 					// Check if there any pieces in front of it, 1 or 2 spots
+					cout << "Workinged" << endl;
 					return true;
 
 				}
+				return false;
 			}
 			else {
 				if (col == x + 1 and row == y + 1 and isEnemy(board, row, col)) { // and enemy piece 
