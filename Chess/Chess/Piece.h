@@ -13,8 +13,8 @@ private:
 public:
 	Piece(string n, string ColorX, int col, int row) {
 		type = n;
-		int x = col;
-		int y = row;
+		x = col;
+		y = row;
 		color = ColorX;
 	}
 	string getColor () {
