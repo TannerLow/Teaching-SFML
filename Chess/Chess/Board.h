@@ -47,6 +47,7 @@ public:
 		board[r][c] = nullptr;
 	}
 	bool move(int original_row, int original_column, int new_row, int new_column) {
+		cout << board[original_row][original_column]->getColor() << endl;
 		if (board[original_row][original_column]->isValidMove(new_column, new_row, board)) {
 			if (board[new_row][new_column] != nullptr) {
 				remove(new_row, new_column);

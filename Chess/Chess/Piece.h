@@ -13,8 +13,8 @@ private:
 public:
 	Piece(string n, string ColorX, int col, int row) {
 		type = n;
-		int x = col;
-		int y = row;
+		x = col;
+		y = row;
 		color = ColorX;
 	}
 	string getColor () {
@@ -33,6 +33,8 @@ public:
 		return false;
 	}
 	bool isValidMove(int col, int row, Piece***board) {
+		cout << x << endl;
+		cout << y << endl;
 		if (type == "pawn") {
 			if (color == "black") {
 				if (col == x - 1 and row == y - 1 and isEnemy(board, row, col)) { // and enemy piece 
