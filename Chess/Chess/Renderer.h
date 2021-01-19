@@ -1,5 +1,7 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+#include "Board.h"
+
 
 class Renderer
 {
@@ -24,15 +26,21 @@ public:
 		for (int i = 0; i < 6; i++) {
 			for (int b = 0; b < 2; b++) {
 				sf::IntRect rect(sheetSize.x * i, sheetSize.y * b, sheetSize.x, sheetSize.y);
-				sprite[0].setTexture(spriteSheet);
-				sprite[0].setTextureRect(rect);
-				sprite[0].setScale(.5, .5);
+				sprite[i + 6 * b].setTexture(spriteSheet);
+				sprite[i + 6 * b].setTextureRect(rect);
+				sprite[i + 6 * b].setScale(.5, .5);
 			}
 		}
 	}
 
-	void draw(sf::RenderWindow& window) {
+	void draw(sf::RenderWindow& window, Board& boardy) {
 		window.draw(boardSprite);
-		window.draw(sprite[0]);
+
+		if (boardy.getPiece(0, 0)->getColor() == "white") {
+			if (boardy.getPiece(0, 0)->getType() == "Rook") {
+				window.draw(sprite[4]);
+			}
+		}
 	}
+	
 };

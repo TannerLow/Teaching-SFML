@@ -72,4 +72,9 @@ public:
 		delete[] board;
 	}
 
+	Piece* getPiece(int row, int rol) {
+		return board[row][col];
+	}
+
+
 };
