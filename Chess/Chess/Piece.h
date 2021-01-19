@@ -20,6 +20,9 @@ public:
 	string getColor () {
 		return color;
 	}
+	string getType() {
+		return type;
+	}
 	bool isEnemy(Piece*** board, int row, int column) {
 		if (board[row][column] != nullptr and color != board[row][column]->getColor()) {
 			return true;
