@@ -1,8 +1,7 @@
-﻿  Piece.cpp
-  main.cpp
+﻿  main.cpp
   Generating code
-  2 of 143 functions ( 1.4%) were compiled, the rest were copied from previous compilation.
+C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Renderer.h(24): error C4700: uninitialized local variable 'i' used
+  2 of 173 functions ( 1.2%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    2 functions had inline decision re-evaluated but remain unchanged
-  Finished generating code
-  Chess.vcxproj -> C:\Users\Tanner\Documents\GitHub\Teaching-SFML\Chess\Release\Chess.exe
+    1 functions had inline decision re-evaluated but remain unchanged
+LINK : fatal error LNK1257: code generation failed
