@@ -6,6 +6,7 @@ using namespace std;
 
 int main() {
 	Renderer r;
+	Board board;
 	sf::RenderWindow window(sf::VideoMode(800,800), "Chess");
 
 	while (window.isOpen())
@@ -18,7 +19,7 @@ int main() {
 		}
 
 		window.clear();
-		r.draw(window);
+		r.draw(window, board);
 		window.display();
 	}
 
@@ -26,8 +27,6 @@ int main() {
 	int b;
 	int c;
 	int d;
-
-	Board board;
 
 	cout << "Row 1: ";
 	cin >> a;
