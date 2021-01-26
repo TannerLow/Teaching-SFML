@@ -47,15 +47,23 @@ public:
 		board[r][c] = nullptr;
 	}
 	bool move(int original_row, int original_column, int new_row, int new_column) {
+		cout << board[original_row][original_column]->getColor() << endl;
+
+		//if it is a valid move
 		if (board[original_row][original_column]->isValidMove(new_column, new_row, board)) {
+			//if destination is occupied
 			if (board[new_row][new_column] != nullptr) {
+				//remove piece occupying the destination
 				remove(new_row, new_column);
-				board[original_row][original_column] = board[new_row][new_column];
-				remove(original_row, original_column);
+				board[new_row][new_column] = board[original_row][original_column]; //move selected piece
+				//remove(original_row, original_column);
+				board[original_row][original_column] = nullptr;
 			}
+			//if destination is empty
 			else {
-				board[original_row][original_column] = board[new_row][new_column];
-				remove(original_row, original_column);
+				board[new_row][new_column] = board[original_row][original_column]; //move selected piece
+				//remove(original_row, original_column);
+				board[original_row][original_column] = nullptr;
 			}
 			return true;
 		}
@@ -72,9 +80,7 @@ public:
 		delete[] board;
 	}
 
-	Piece* getPiece(int row, int rol) {
+	Piece* getPiece(int row, int col) {
 		return board[row][col];
 	}
-
-
 };
