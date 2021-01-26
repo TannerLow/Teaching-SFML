@@ -26,19 +26,20 @@ public:
 		return type;
 	}
 
-
 	bool isEnemy(Piece*** board, int row, int column) {
 		if (board[row][column] != nullptr and color != board[row][column]->getColor()) {
 			return true;
 		}
 		return false;
 	}
+
 	bool isAlly(Piece*** board, int row, int column) {
 		if (board[row][column] != nullptr and color == board[row][column]->getColor()) {
 			return true;
 		}
 		return false;
 	}
+
 	bool isValidMove(int col, int row, Piece***board) {
 		cout << type << color << x << y << endl;
 		if (type == "pawn") {
@@ -91,7 +92,7 @@ public:
 				}
 			}
 		}
-		if (type == "Knight") {
+		if (type == "knight") {
 			if (col == x + 1 and row == y + 2 and !isAlly(board, row, col))
 				return true;
 			if (col == x + 1 and row == y - 2 and !isAlly(board, row, col))
@@ -110,7 +111,7 @@ public:
 				return true;
 			return false;
 		}
-		if (type == "Rook") {
+		if (type == "rook") {
 			//If the row and column are both changed, the function will see it as an invalid move
 			if (x != col and y == row or x == col and y != row) { 
 				if (x < col and y == row) { // to the right
@@ -163,7 +164,7 @@ public:
 				return true;
 			}
 		}
-		if (type == "Bishop") {
+		if (type == "bishop") {
 			//If the row and column are both changed, the function will see it as an invalid move
 			if (x != col and y != row) {
 				if (x < col and y < row) { // going top right
@@ -216,7 +217,7 @@ public:
 				return true;
 			}
 		}
-		if (type == "Queen") {
+		if (type == "queen") {
 			if (x != col and y == row or x == col and y != row) { // rook check
 				if (x < col and y == row) { // to the right
 					for (int i = 1; col - i > x; i++) {
