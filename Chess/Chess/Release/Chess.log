@@ -1,6 +1,7 @@
 ﻿  main.cpp
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Renderer.h(6,7): error C2059: syntax error: 'using namespace'
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Renderer.h(6,20): error C2238: unexpected token(s) preceding ';'
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\main.cpp(5,7): error C2059: syntax error: 'using namespace'
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\main.cpp(5,20): error C2238: unexpected token(s) preceding ';'
-C:\Users\Owner\Documents\GitHub\Teaching-SFML\Chess\Chess\Board.h(7): fatal error C1075: '{': no matching token found
+  Generating code
+  1 of 143 functions ( 0.7%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    2 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  Chess.vcxproj -> C:\Users\Tanner\Documents\GitHub\Teaching-SFML\Chess\Release\Chess.exe

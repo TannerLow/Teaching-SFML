@@ -9,11 +9,9 @@ int main() {
 	Board board;
 	sf::RenderWindow window(sf::VideoMode(800,800), "Chess");
 
-	/*
-	int currentRow = 0, currentCol = 0;
+	int row = 0, col = 0;
 	int newRow = 0, newCol = 0;
-	bool firstClick = true;
-	*/
+	int counter = 1;
 
 	while (window.isOpen())
 	{
@@ -24,12 +22,23 @@ int main() {
 				window.close();
 
 			if (event.type == sf::Event::MouseButtonPressed)
+			{
+				if (counter == 1) {
+					row = event.mouseButton.y / 100;
+					col = event.mouseButton.x / 100;
+					counter++;
+				}
+				else if (counter == 2) {
+					newRow = event.mouseButton.y / 100;
+					newCol = event.mouseButton.x / 100;
+					counter = 1;
+				}
+				cout << "Row: " << event.mouseButton.y/100 << endl;
+				cout << "Col: " << event.mouseButton.x/100 << endl;
+			}
+			
 		}
-		cout << "Row ": << (event.mouseButton.y / 100 + 1) << endl;
-		cout << "Column: " << (event.mouseButton.x / 100 + 1) << endl;
-		}
-		
-	
+
 		window.clear();
 		r.draw(window, board);
 		window.display();
