@@ -26,6 +26,11 @@ public:
 		return type;
 	}
 
+	void setPos(int row, int col) {
+		x == col;
+		y == row;
+	}
+
 	bool isEnemy(Piece*** board, int row, int column) {
 		if (board[row][column] != nullptr and color != board[row][column]->getColor()) {
 			return true;
