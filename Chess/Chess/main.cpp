@@ -9,11 +9,9 @@ int main() {
 	Board board;
 	sf::RenderWindow window(sf::VideoMode(800,800), "Chess");
 
-	/*
-	int currentRow = 0, currentCol = 0;
+	int row = 0, col = 0;
 	int newRow = 0, newCol = 0;
-	bool firstClick = true;
-	*/
+	int counter = 1;
 
 	while (window.isOpen())
 	{
@@ -23,31 +21,22 @@ int main() {
 			if (event.type == sf::Event::Closed)
 				window.close();
 
-			/*
-			//mouse events
 			if (event.type == sf::Event::MouseButtonPressed)
 			{
-				if (firstClick) {
-					currentRow = event.mouseButton.y / 100;
-					currentCol = event.mouseButton.x / 100;
-					cout << "From " << endl;
-					cout << "row: " << currentRow << std::endl;
-					cout << "col: " << currentCol << std::endl;
-
-					firstClick = false;
+				if (counter == 1) {
+					row = event.mouseButton.y / 100;
+					col = event.mouseButton.x / 100;
+					counter++;
 				}
-				else {
+				else if (counter == 2) {
 					newRow = event.mouseButton.y / 100;
 					newCol = event.mouseButton.x / 100;
-					cout << "To " << endl;
-					cout << "row: " << newRow << std::endl;
-					cout << "col: " << newCol << std::endl;
-
-					cout << (board.move(currentRow, currentCol, newRow, newCol) ? "move successful" : "move marked invalid") << endl;
-					firstClick = true;
+					counter = 1;
 				}
+				cout << "Row: " << event.mouseButton.y / 100 << endl;
+				cout << "Col: " << event.mouseButton.x / 100 << endl;
 			}
-			*/
+
 		}
 
 		window.clear();
