@@ -81,4 +81,5 @@ public:
 	}
 	Piece* getPiece(int row, int col) {
 		return board[row][col];
+	}
 };
