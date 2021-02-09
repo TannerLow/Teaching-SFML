@@ -95,8 +95,8 @@ public:
 		if (type == "king") {
 			if (y - 1 <= row and row <= y + 1) {
 				if (x - 1 <= col and col <= x + 1) {
-					if (col != x and row != y) // can't land on same piece
-						return true;
+					if (col == x and row == y) // can't land on same piece
+						return false;
 					if (isAlly(board, row, col) == true) {
 						return false;
 					}
@@ -188,27 +188,17 @@ public:
 				}
 
 				if (x < col and y > row) { // going top right
-					for (int i = 1; col - i > x and row - i > y; i++) {
-						if (isEnemy(board, row - i, col - i)) {
+					for (int i = 1; col - i > x and row + i < y; i++) {
+						if (isEnemy(board, row + i, col - i)) {
 							return false;
 						}
-						else if (isAlly(board, row - i, col - i)) {
+						else if (isAlly(board, row + i, col - i)) {
 							return false;
 						}
 					}
 				}
 				else if (x > col and y < row) { // going bottom left
-					for (int i = 1; col + i < x and row + i < y; i++) {
-						if (isEnemy(board, row + i, col + i)) {
-							return false;
-						}
-						else if (isAlly(board, row + i, col + i)) {
-							return false;
-						}
-					}
-				}
-				else if (x < col and y < row) { // going bottom right
-					for (int i = 1; row - i > y and col + i < x; i++) {
+					for (int i = 1; col + i < x and row - i > y; i++) {
 						if (isEnemy(board, row - i, col + i)) {
 							return false;
 						}
@@ -217,12 +207,22 @@ public:
 						}
 					}
 				}
-				else if (x > col and y > row) { // going top left
-					for (int i = 1; row + i < y and col - i > x; i++) {
-						if (isEnemy(board, row + i, col - i)) {
+				else if (x < col and y < row) { // going bottom right
+					for (int i = 1; row - i > y and col - i > x; i++) {
+						if (isEnemy(board, row - i, col - i)) {
 							return false;
 						}
-						else if (isAlly(board, row + i, col - i)) {
+						else if (isAlly(board, row - i, col - i)) {
+							return false;
+						}
+					}
+				}
+				else if (x > col and y > row) { // going top left
+					for (int i = 1; row + i < y and col + i < x; i++) {
+						if (isEnemy(board, row + i, col + i)) {
+							return false;
+						}
+						else if (isAlly(board, row + i, col + i)) {
 							return false;
 						}
 					}
@@ -291,27 +291,17 @@ public:
 				}
 
 				if (x < col and y > row) { // going top right
-					for (int i = 1; col - i > x and row - i > y; i++) {
-						if (isEnemy(board, row - i, col - i)) {
+					for (int i = 1; col - i > x and row + i < y; i++) {
+						if (isEnemy(board, row + i, col - i)) {
 							return false;
 						}
-						else if (isAlly(board, row - i, col - i)) {
+						else if (isAlly(board, row + i, col - i)) {
 							return false;
 						}
 					}
 				}
 				else if (x > col and y < row) { // going bottom left
-					for (int i = 1; col + i < x and row + i < y; i++) {
-						if (isEnemy(board, row + i, col + i)) {
-							return false;
-						}
-						else if (isAlly(board, row + i, col + i)) {
-							return false;
-						}
-					}
-				}
-				else if (x < col and y < row) { // going bottom right
-					for (int i = 1; row - i > y and col + i < x; i++) {
+					for (int i = 1; col + i < x and row - i > y; i++) {
 						if (isEnemy(board, row - i, col + i)) {
 							return false;
 						}
@@ -320,12 +310,22 @@ public:
 						}
 					}
 				}
-				else if (x > col and y > row) { // going top left
-					for (int i = 1; row + i < y and col - i > x; i++) {
-						if (isEnemy(board, row + i, col - i)) {
+				else if (x < col and y < row) { // going bottom right
+					for (int i = 1; row - i > y and col - i > x; i++) {
+						if (isEnemy(board, row - i, col - i)) {
 							return false;
 						}
-						else if (isAlly(board, row + i, col - i)) {
+						else if (isAlly(board, row - i, col - i)) {
+							return false;
+						}
+					}
+				}
+				else if (x > col and y > row) { // going top left
+					for (int i = 1; row + i < y and col + i < x; i++) {
+						if (isEnemy(board, row + i, col + i)) {
+							return false;
+						}
+						else if (isAlly(board, row + i, col + i)) {
 							return false;
 						}
 					}
