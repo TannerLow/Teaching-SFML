@@ -32,12 +32,12 @@ int main() {
 					newRow = event.mouseButton.y / 100;
 					newCol = event.mouseButton.x / 100;
 					counter = 1;
-					board.move(row, col, newRow, newCol);
+					cout << (board.move(row, col, newRow, newCol) ? "move successful" : "move marked invalid") << endl;
 				}
-				cout << "Row: " << event.mouseButton.y / 100 << endl;
-				cout << "Col: " << event.mouseButton.x / 100 << endl;
+				cout << "Row: " << event.mouseButton.y/100 << endl;
+				cout << "Col: " << event.mouseButton.x/100 << endl;
 			}
-
+			
 		}
 
 		window.clear();

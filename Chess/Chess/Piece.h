@@ -17,6 +17,12 @@ public:
 		y = row;
 		color = ColorX;
 	}
+
+	void setPos(int row, int col) {
+		x = col;
+		y = row;
+	}
+
 	string getColor () {
 		return color;
 	}
@@ -33,6 +39,7 @@ public:
 
 	bool isEnemy(Piece*** board, int row, int column) {
 		if (board[row][column] != nullptr and color != board[row][column]->getColor()) {
+			cout << "isEnemy" << endl;
 			return true;
 		}
 		return false;
@@ -40,6 +47,7 @@ public:
 
 	bool isAlly(Piece*** board, int row, int column) {
 		if (board[row][column] != nullptr and color == board[row][column]->getColor()) {
+			cout << "is Ally" << endl;
 			return true;
 		}
 		return false;
@@ -47,6 +55,7 @@ public:
 
 	bool isValidMove(int col, int row, Piece***board) {
 		cout << type << color << x << y << endl;
+		cout << "pawn?" << endl;
 		if (type == "pawn") {
 			if (color == "black") {
 				if (col == x - 1 and row == y - 1 and isEnemy(board, row, col)) { // diagonal attack
@@ -86,6 +95,7 @@ public:
 				return false;
 			}
 		}
+		cout << "king?" << endl;
 		if (type == "king") {
 			if (y - 1 <= row and row <= y + 1) {
 				if (x - 1 <= col and col <= x + 1) {
@@ -97,6 +107,8 @@ public:
 				}
 			}
 		}
+		cout << "knight?" << endl;
+		//can't move up and to the left (upside down L shape)
 		if (type == "knight") {
 			if (col == x + 1 and row == y + 2 and !isAlly(board, row, col))
 				return true;
@@ -116,6 +128,7 @@ public:
 				return true;
 			return false;
 		}
+		cout << "rook?" << endl;
 		if (type == "rook") {
 			//If the row and column are both changed, the function will see it as an invalid move
 			if (x != col and y == row or x == col and y != row) { 
@@ -139,7 +152,7 @@ public:
 						}
 					}
 				}
-				else if (x == col and y > row) { // going down
+				else if (x == col and y < row) { // going down
 					for (int i = 1; row - i > y; i++) {
 						if (isEnemy(board, row - i, col)) {
 							return false;
@@ -149,7 +162,7 @@ public:
 						}
 					}
 				}
-				else if (x == col and y < row) { // going up
+				else if (x == col and y > row) { // going up
 					for (int i = 1; row + i < y; i++) {
 						if (isEnemy(board, row + i, col)) {
 							return false;
@@ -163,12 +176,17 @@ public:
 					}
 					return true;
 				}
+				else {
+					return false;
+				}
 				if (isAlly(board, row, col)) {
 					return false;
 				}
 				return true;
 			}
+			return false;
 		}
+		cout << "bishop?" << endl;
 		if (type == "bishop") {
 			//If the row and column are both changed, the function will see it as an invalid move
 			if (x != col and y != row) {
@@ -222,6 +240,7 @@ public:
 				return true;
 			}
 		}
+		cout << "queen?" << endl;
 		if (type == "queen") {
 			if (x != col and y == row or x == col and y != row) { // rook check
 				if (x < col and y == row) { // to the right
@@ -321,5 +340,6 @@ public:
 				return true;
 			}
 		}
+		return false;
 	}
 };

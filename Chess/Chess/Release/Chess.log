@@ -1,10 +1,7 @@
 ﻿  main.cpp
-C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(30,5): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(31,5): warning C4553: '==': result of expression not used; did you intend '='?
   Generating code
-C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Chess\Piece.h(324): warning C4715: 'Piece::isValidMove': not all control paths return a value
-  141 of 144 functions (97.9%) were compiled, the rest were copied from previous compilation.
-    1 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+  1 of 144 functions ( 0.7%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    2 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
-  Chess.vcxproj -> C:\Users\gavin\OneDrive\Desktop\Files\C++ Projects\Teaching-SFML\Chess\Release\Chess.exe
+  Chess.vcxproj -> C:\Users\Tanner\Documents\Github\Teaching-SFML\Chess\Release\Chess.exe
