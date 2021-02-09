@@ -99,13 +99,14 @@ public:
 					if (isAlly(board, row, col) == true) {
 						return false;
 					}
+					return true;
 				}
 			}
 		}
 		cout << "knight?" << endl;
 		//can't move up and to the left (upside down L shape)
 		if (type == "knight") {
-			if (col == x + 1 and row == y + 2 and !isAlly(board, row, col))
+			if (col == x + 1 and row == y + 2 and !isAlly(board, row, col)) 
 				return true;
 			if (col == x + 1 and row == y - 2 and !isAlly(board, row, col))
 				return true;
@@ -113,7 +114,7 @@ public:
 				return true;
 			if (col == x + 2 and row == y - 1 and !isAlly(board, row, col)) 
 				return true;
-			if (col == x - 1 and row == y - 1 and !isAlly(board, row, col))
+			if (col == x - 1 and row == y - 2 and !isAlly(board, row, col))
 				return true;
 			if (col == x - 1 and row == y + 2 and !isAlly(board, row, col))
 				return true;
