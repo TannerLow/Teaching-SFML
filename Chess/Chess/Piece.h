@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
@@ -99,6 +100,7 @@ public:
 					if (isAlly(board, row, col) == true) {
 						return false;
 					}
+					return true;
 				}
 			}
 		}
@@ -113,7 +115,7 @@ public:
 				return true;
 			if (col == x + 2 and row == y - 1 and !isAlly(board, row, col)) 
 				return true;
-			if (col == x - 1 and row == y - 1 and !isAlly(board, row, col))
+			if (col == x - 1 and row == y - 2 and !isAlly(board, row, col))
 				return true;
 			if (col == x - 1 and row == y + 2 and !isAlly(board, row, col))
 				return true;
@@ -166,10 +168,6 @@ public:
 							return false;
 						}
 					}
-					if (isAlly(board, row, col)) {
-						return false;
-					}
-					return true;
 				}
 				else {
 					return false;
@@ -185,7 +183,11 @@ public:
 		if (type == "bishop") {
 			//If the row and column are both changed, the function will see it as an invalid move
 			if (x != col and y != row) {
-				if (x < col and y < row) { // going top right
+				if (abs(col - x) != abs(row - y)) {
+					return false;
+				}
+
+				if (x < col and y > row) { // going top right
 					for (int i = 1; col - i > x and row - i > y; i++) {
 						if (isEnemy(board, row - i, col - i)) {
 							return false;
@@ -195,7 +197,7 @@ public:
 						}
 					}
 				}
-				else if (x > col and y > row) { // going bottom left
+				else if (x > col and y < row) { // going bottom left
 					for (int i = 1; col + i < x and row + i < y; i++) {
 						if (isEnemy(board, row + i, col + i)) {
 							return false;
@@ -205,7 +207,7 @@ public:
 						}
 					}
 				}
-				else if (x < col and y > row) { // going bottom right
+				else if (x < col and y < row) { // going bottom right
 					for (int i = 1; row - i > y and col + i < x; i++) {
 						if (isEnemy(board, row - i, col + i)) {
 							return false;
@@ -215,7 +217,7 @@ public:
 						}
 					}
 				}
-				else if (x > col and y < row) { // going top left
+				else if (x > col and y > row) { // going top left
 					for (int i = 1; row + i < y and col - i > x; i++) {
 						if (isEnemy(board, row + i, col - i)) {
 							return false;
@@ -224,20 +226,17 @@ public:
 							return false;
 						}
 					}
-					if (isAlly(board, row, col)) {
-						return false;
-					}
-					return true;
 				}
 				if (isAlly(board, row, col)) {
 					return false;
 				}
 				return true;
 			}
+			return false;
 		}
 		cout << "queen?" << endl;
 		if (type == "queen") {
-			if (x != col and y == row or x == col and y != row) { // rook check
+			if (x != col and y == row or x == col and y != row) {
 				if (x < col and y == row) { // to the right
 					for (int i = 1; col - i > x; i++) {
 						if (isEnemy(board, row, col - i)) {
@@ -258,7 +257,7 @@ public:
 						}
 					}
 				}
-				else if (x == col and y > row) { // going down
+				else if (x == col and y < row) { // going down
 					for (int i = 1; row - i > y; i++) {
 						if (isEnemy(board, row - i, col)) {
 							return false;
@@ -268,7 +267,7 @@ public:
 						}
 					}
 				}
-				else if (x == col and y < row) { // going up
+				else if (x == col and y > row) { // going up
 					for (int i = 1; row + i < y; i++) {
 						if (isEnemy(board, row + i, col)) {
 							return false;
@@ -278,13 +277,20 @@ public:
 						}
 					}
 				}
+				else {
+					return false;
+				}
 				if (isAlly(board, row, col)) {
 					return false;
 				}
 				return true;
 			}
-			else if (x != col and y != row) { // bishop check
-				if (x < col and y < row) { // going top right
+			if (x != col and y != row) {
+				if (abs(col - x) != abs(row - y)) {
+					return false;
+				}
+
+				if (x < col and y > row) { // going top right
 					for (int i = 1; col - i > x and row - i > y; i++) {
 						if (isEnemy(board, row - i, col - i)) {
 							return false;
@@ -293,9 +299,8 @@ public:
 							return false;
 						}
 					}
-					return true;
 				}
-				else if (x > col and y > row) { // going bottom left
+				else if (x > col and y < row) { // going bottom left
 					for (int i = 1; col + i < x and row + i < y; i++) {
 						if (isEnemy(board, row + i, col + i)) {
 							return false;
@@ -305,7 +310,7 @@ public:
 						}
 					}
 				}
-				else if (x < col and y > row) { // going bottom right
+				else if (x < col and y < row) { // going bottom right
 					for (int i = 1; row - i > y and col + i < x; i++) {
 						if (isEnemy(board, row - i, col + i)) {
 							return false;
@@ -315,7 +320,7 @@ public:
 						}
 					}
 				}
-				else if (x > col and y < row) { // going top left
+				else if (x > col and y > row) { // going top left
 					for (int i = 1; row + i < y and col - i > x; i++) {
 						if (isEnemy(board, row + i, col - i)) {
 							return false;
@@ -324,16 +329,13 @@ public:
 							return false;
 						}
 					}
-					if (isAlly(board,row, col)) {
-						return false;
-					}
-					return true;
 				}
 				if (isAlly(board, row, col)) {
 					return false;
 				}
 				return true;
 			}
+			return false;
 		}
 		return false;
 	}
