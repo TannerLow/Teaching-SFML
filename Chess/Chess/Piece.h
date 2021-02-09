@@ -8,6 +8,7 @@ class Piece {
 private: 
 	int x;
 	int y;
+	int counter5;
 	string type;
 	string color;
 public:
@@ -30,11 +31,6 @@ public:
 	//getType
 	string getType() {
 		return type;
-	}
-
-	void setPos(int row, int col) {
-		x == col;
-		y == row;
 	}
 
 	bool isEnemy(Piece*** board, int row, int column) {
@@ -190,54 +186,74 @@ public:
 		if (type == "bishop") {
 			//If the row and column are both changed, the function will see it as an invalid move
 			if (x != col and y != row) {
-				if (x < col and y < row) { // going top right
-					for (int i = 1; col - i > x and row - i > y; i++) {
-						if (isEnemy(board, row - i, col - i)) {
-							return false;
-						}
-						else if (isAlly(board, row - i, col - i)) {
-							return false;
-						}
-					}
-				}
-				else if (x > col and y > row) { // going bottom left
-					for (int i = 1; col + i < x and row + i < y; i++) {
-						if (isEnemy(board, row + i, col + i)) {
-							return false;
-						}
-						else if (isAlly(board, row + i, col + i)) {
-							return false;
-						}
-					}
-				}
-				else if (x < col and y > row) { // going bottom right
-					for (int i = 1; row - i > y and col + i < x; i++) {
-						if (isEnemy(board, row - i, col + i)) {
-							return false;
-						}
-						else if (isAlly(board, row - i, col + i)) {
-							return false;
-						}
-					}
-				}
-				else if (x > col and y < row) { // going top left
-					for (int i = 1; row + i < y and col - i > x; i++) {
+				if (x > col and y > row) { // going bottom left
+					cout << "maybe";
+					for (int i = 1; col - i < x and row + i < y; i++) {
 						if (isEnemy(board, row + i, col - i)) {
 							return false;
 						}
 						else if (isAlly(board, row + i, col - i)) {
 							return false;
 						}
+						else {
+							return true;
+							counter5 = 1;
+						}
 					}
-					if (isAlly(board, row, col)) {
-						return false;
-					}
-					return true;
 				}
-				if (isAlly(board, row, col)) {
+				else if (x > col and y > row) { // going top right
+					cout << "yes";
+					for (int i = 1; col + i < x and row + i < y; i++) {
+						if (isEnemy(board, row + i, col + i)) {
+							return false;
+							cout << "Bishop: " << board + 1, row + 1;
+						}
+						else if (isAlly(board, row + i, col + i)) {
+							return false;
+							cout << "Bishop: " << board + 1, row + 1;
+						}
+						else {
+							return true;
+							counter5 = 1;
+						}
+					}
+				}
+				else if (x < col and y > row) { // going bottom right
+					cout << "no";
+					for (int i = 1; row - i > y and col + i < x; i++) {
+						if (isEnemy(board, row - i, col + i)) {
+							return false;
+							cout << "Bishop: " << board - 1, row + 1;
+						}
+						else if (isAlly(board, row - i, col + i)) {
+							return false;
+							cout << "Bishop: " << board - 1, row + 1;
+						}
+						else {
+							return true;
+							counter5 = 1;
+						}
+					}
+				}
+				else if (x > col and y < row) { // going top left
+					for (int i = 1; row - i < y and col - i > x; i++) {
+						if (isEnemy(board, row - i, col - i)) {
+							return false;
+							cout << "Bishop: " << board - 1, row - 1;
+						}
+						else if (isAlly(board, row - i, col - i)) {
+							return false;
+							cout << "Bishop: " << board - 1, row - 1;
+						}
+						else {
+							return true;
+							counter5 = 1;
+						}
+					}
+				}
+				else if (counter5 != 1) {
 					return false;
 				}
-				return true;
 			}
 		}
 		cout << "queen?" << endl;
