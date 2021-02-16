@@ -44,24 +44,4 @@ int main() {
 		r.draw(window, board);
 		window.display();
 	}
-
-	int a;
-	int b;
-	int c;
-	int d;
-
-	cout << "Row 1: ";
-	cin >> a;
-	cout << endl;
-	cout << "Column 1: ";
-	cin >> b;
-	cout << endl;
-	cout << "Row 2: ";
-	cin >> c;
-	cout << endl;
-	cout << "Column 2: ";
-	cin >> d;
-
-	cout << (board.move(a, b, c, d) ? "move successful" : "move marked invalid")  << endl;
-	cout << endl;
 }

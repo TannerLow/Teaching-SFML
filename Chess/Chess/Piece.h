@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
@@ -8,7 +9,6 @@ class Piece {
 private: 
 	int x;
 	int y;
-	int counter5;
 	string type;
 	string color;
 public:
@@ -95,11 +95,12 @@ public:
 		if (type == "king") {
 			if (y - 1 <= row and row <= y + 1) {
 				if (x - 1 <= col and col <= x + 1) {
-					if (col != x and row != y) // can't land on same piece
-						return true;
+					if (col == x and row == y) // can't land on same piece
+						return false;
 					if (isAlly(board, row, col) == true) {
 						return false;
 					}
+					return true;
 				}
 			}
 		}
@@ -114,7 +115,7 @@ public:
 				return true;
 			if (col == x + 2 and row == y - 1 and !isAlly(board, row, col)) 
 				return true;
-			if (col == x - 1 and row == y - 1 and !isAlly(board, row, col))
+			if (col == x - 1 and row == y - 2 and !isAlly(board, row, col))
 				return true;
 			if (col == x - 1 and row == y + 2 and !isAlly(board, row, col))
 				return true;
@@ -167,10 +168,6 @@ public:
 							return false;
 						}
 					}
-					if (isAlly(board, row, col)) {
-						return false;
-					}
-					return true;
 				}
 				else {
 					return false;
@@ -186,79 +183,60 @@ public:
 		if (type == "bishop") {
 			//If the row and column are both changed, the function will see it as an invalid move
 			if (x != col and y != row) {
-				if (x > col and y > row) { // going bottom left
-					cout << "maybe";
-					for (int i = 1; col - i < x and row + i < y; i++) {
+				if (abs(col - x) != abs(row - y)) {
+					return false;
+				}
+
+				if (x < col and y > row) { // going top right
+					for (int i = 1; col - i > x and row + i < y; i++) {
 						if (isEnemy(board, row + i, col - i)) {
 							return false;
 						}
 						else if (isAlly(board, row + i, col - i)) {
 							return false;
 						}
-						else {
-							return true;
-							counter5 = 1;
-						}
 					}
 				}
-				else if (x > col and y > row) { // going top right
-					cout << "yes";
-					for (int i = 1; col + i < x and row + i < y; i++) {
-						if (isEnemy(board, row + i, col + i)) {
-							return false;
-							cout << "Bishop: " << board + 1, row + 1;
-						}
-						else if (isAlly(board, row + i, col + i)) {
-							return false;
-							cout << "Bishop: " << board + 1, row + 1;
-						}
-						else {
-							return true;
-							counter5 = 1;
-						}
-					}
-				}
-				else if (x < col and y > row) { // going bottom right
-					cout << "no";
-					for (int i = 1; row - i > y and col + i < x; i++) {
+				else if (x > col and y < row) { // going bottom left
+					for (int i = 1; col + i < x and row - i > y; i++) {
 						if (isEnemy(board, row - i, col + i)) {
 							return false;
-							cout << "Bishop: " << board - 1, row + 1;
 						}
 						else if (isAlly(board, row - i, col + i)) {
 							return false;
-							cout << "Bishop: " << board - 1, row + 1;
-						}
-						else {
-							return true;
-							counter5 = 1;
 						}
 					}
 				}
-				else if (x > col and y < row) { // going top left
-					for (int i = 1; row - i < y and col - i > x; i++) {
+				else if (x < col and y < row) { // going bottom right
+					for (int i = 1; row - i > y and col - i > x; i++) {
 						if (isEnemy(board, row - i, col - i)) {
 							return false;
-							cout << "Bishop: " << board - 1, row - 1;
 						}
 						else if (isAlly(board, row - i, col - i)) {
 							return false;
-							cout << "Bishop: " << board - 1, row - 1;
-						}
-						else {
-							return true;
-							counter5 = 1;
 						}
 					}
 				}
-				else if (counter5 != 1) {
+				else if (x > col and y > row) { // going top left
+					for (int i = 1; row + i < y and col + i < x; i++) {
+						if (isEnemy(board, row + i, col + i)) {
+							return false;
+						}
+						else if (isAlly(board, row + i, col + i)) {
+							return false;
+						}
+					}
+				}
+				if (isAlly(board, row, col)) {
 					return false;
 				}
+				return true;
 			}
+			return false;
 		}
 		cout << "queen?" << endl;
 		if (type == "queen") {
-			if (x != col and y == row or x == col and y != row) { // rook check
+			if (x != col and y == row or x == col and y != row) {
 				if (x < col and y == row) { // to the right
 					for (int i = 1; col - i > x; i++) {
 						if (isEnemy(board, row, col - i)) {
@@ -279,7 +257,7 @@ public:
 						}
 					}
 				}
-				else if (x == col and y > row) { // going down
+				else if (x == col and y < row) { // going down
 					for (int i = 1; row - i > y; i++) {
 						if (isEnemy(board, row - i, col)) {
 							return false;
@@ -289,7 +267,7 @@ public:
 						}
 					}
 				}
-				else if (x == col and y < row) { // going up
+				else if (x == col and y > row) { // going up
 					for (int i = 1; row + i < y; i++) {
 						if (isEnemy(board, row + i, col)) {
 							return false;
@@ -299,35 +277,31 @@ public:
 						}
 					}
 				}
+				else {
+					return false;
+				}
 				if (isAlly(board, row, col)) {
 					return false;
 				}
 				return true;
 			}
-			else if (x != col and y != row) { // bishop check
-				if (x < col and y < row) { // going top right
-					for (int i = 1; col - i > x and row - i > y; i++) {
-						if (isEnemy(board, row - i, col - i)) {
-							return false;
-						}
-						else if (isAlly(board, row - i, col - i)) {
-							return false;
-						}
-					}
-					return true;
+			if (x != col and y != row) {
+				if (abs(col - x) != abs(row - y)) {
+					return false;
 				}
-				else if (x > col and y > row) { // going bottom left
-					for (int i = 1; col + i < x and row + i < y; i++) {
-						if (isEnemy(board, row + i, col + i)) {
+
+				if (x < col and y > row) { // going top right
+					for (int i = 1; col - i > x and row + i < y; i++) {
+						if (isEnemy(board, row + i, col - i)) {
 							return false;
 						}
-						else if (isAlly(board, row + i, col + i)) {
+						else if (isAlly(board, row + i, col - i)) {
 							return false;
 						}
 					}
 				}
-				else if (x < col and y > row) { // going bottom right
-					for (int i = 1; row - i > y and col + i < x; i++) {
+				else if (x > col and y < row) { // going bottom left
+					for (int i = 1; col + i < x and row - i > y; i++) {
 						if (isEnemy(board, row - i, col + i)) {
 							return false;
 						}
@@ -336,25 +310,32 @@ public:
 						}
 					}
 				}
-				else if (x > col and y < row) { // going top left
-					for (int i = 1; row + i < y and col - i > x; i++) {
-						if (isEnemy(board, row + i, col - i)) {
+				else if (x < col and y < row) { // going bottom right
+					for (int i = 1; row - i > y and col - i > x; i++) {
+						if (isEnemy(board, row - i, col - i)) {
 							return false;
 						}
-						else if (isAlly(board, row + i, col - i)) {
+						else if (isAlly(board, row - i, col - i)) {
 							return false;
 						}
 					}
-					if (isAlly(board,row, col)) {
-						return false;
+				}
+				else if (x > col and y > row) { // going top left
+					for (int i = 1; row + i < y and col + i < x; i++) {
+						if (isEnemy(board, row + i, col + i)) {
+							return false;
+						}
+						else if (isAlly(board, row + i, col + i)) {
+							return false;
+						}
 					}
-					return true;
 				}
 				if (isAlly(board, row, col)) {
 					return false;
 				}
 				return true;
 			}
+			return false;
 		}
 		return false;
 	}
